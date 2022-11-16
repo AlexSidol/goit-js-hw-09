@@ -1,14 +1,14 @@
 import Notiflix from 'notiflix';
 
 
-function createPromise(position, delay) {
+function createPromise(index, delay) {
   const shouldResolve = Math.random() > 0.3;
   return new Promise((resolve, reject) => {
     setTimeout(() => {
      if (shouldResolve) {
-       resolve({position, delay});
+       resolve({index, delay});
   } else {
-    reject ({position, delay});
+    reject ({index, delay});
   }
   }, delay) 
 });
